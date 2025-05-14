@@ -5,8 +5,8 @@ document
     e.preventDefault();
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
-    // 서버주소 추후에 추가 예정
-    const response = await fetch("http://<서버주소>/api/auth/signin", {
+    
+    const response = await fetch("http://52.79.104.211:8080/api/auth/signin", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
