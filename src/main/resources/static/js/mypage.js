@@ -6,7 +6,7 @@ window.onload = async function () {
     return;
   }
   // 서버주소 추후에 추가 예정
-  const response = await fetch("http://<서버주소>/api/user/me", {
+  const response = await fetch(""http://52.79.104.211:8080/api/user/me", {
     headers: { Authorization: "Bearer " + token },
   });
 
