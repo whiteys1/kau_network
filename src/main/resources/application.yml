@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: root
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+jwt:
+  secret: ${jwt_secret}
+  expiration: 3600000
+  refreshTokenValidity: 604800000
