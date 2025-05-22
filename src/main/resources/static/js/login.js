@@ -3,13 +3,16 @@ document
   .getElementById("loginForm")
   .addEventListener("submit", async function (e) {
     e.preventDefault();
-    const username = document.getElementById("username").value;
+    const email = document.getElementById("username").value;
     const password = document.getElementById("password").value;
-   
-    const response = await fetch("http://52.79.104.211:8080//api/auth/signin", {
+
+    const response = await fetch("http://52.79.104.211:8080/api/auth/signin", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username, password }),
+      headers: {
+        accept: "*/*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, password }),
     });
 
     const data = await response.json();
