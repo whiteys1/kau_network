@@ -6,7 +6,7 @@ document
     const email = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
-    const response = await fetch("http://52.79.104.211:8080/api/auth/signin", {
+    const response = await fetch("http://52.79.104.211:8080/auth/login", {
       method: "POST",
       headers: {
         accept: "*/*",
