@@ -71,4 +71,14 @@ public class UserController {
                 .build();
         return ResponseEntity.ok(response);
     }
+
+    @PostMapping("logout")
+    @Operation(summary = "로그아웃 API", description = "로그아웃")
+    public ResponseEntity<LogoutResponse> logout(
+            @AuthenticationPrincipal CustomUserDetails userDetails
+    ) {
+        authService.logout(userDetails.getUser());
+        LogoutResponse response = new LogoutResponse("성공적으로 로그아웃되었습니다.");
+        return ResponseEntity.ok(response);
+    }
 }

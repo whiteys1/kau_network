@@ -59,4 +59,9 @@ public class AuthServiceImpl implements AuthService {
 
         return result;
     }
+
+    public void logout(User user) {
+        user.setRefreshToken(null);
+        userRepository.save(user);
+    }
 }

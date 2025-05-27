@@ -9,5 +9,6 @@ public interface AuthService {
     boolean isDuplicated(String email);
     User signup(SignupRequestDTO signupRequest);
     LoginResult login(LoginRequest loginRequest);
+    void logout(User user);
 //    String reissueAccessToken(String refreshToken);
 }
